@@ -1,14 +1,19 @@
-# Terminal App
-The terminal app allows its users to deposit and withdraw money from their bank account. 
+# Android Coding Challenge
+
+## Scenario
+Imagine you have just joined a mobile team that is currently working on a banking application.
+The application is live on the Play Store, and the CI/CD is set up to build a new version and push to the Play Store on every push to the repository.
+
+Currently, the banking application allows its users to deposit and withdraw money from their bank account. 
 If the user does not have enough money, the app prevents them from making that withdrawal.
 
 Example: Deposit:50.00(ok), Withdraw:25.00(ok), Withdraw:25.00(ok), Withdraw:0.1(not ok)
 
-The API to support these functions is still being worked on by backend team but should be available in the near future.   
+Note: This feature is currently implemented locally, the API to support this feature is still being worked on by the backend team but should be available in the near future.   
 
-## Your task
-- You are to introduce a new feature that allows the user to view their past transactions
-- Part of this task is to improve the current code which was intentionally made with poor programming practices and a few bugs
+## Your tasks
+- Introduce a new feature that allows the user to view their past transactions
+- Improve the current code which was intentionally made with poor programming practices and a few bugs
 - Improvements are to be made without rewriting the app
 
 ## Expectations
@@ -26,6 +31,7 @@ Provide a README file to document any decisions/improvements you've deferred unt
 - A testing strategy to support the refactoring
 - Simple and concise code
 - Proper modelling of the domain
+- A reasonable but scalable architecture
 - A README that will help other developers
 
 ### What you will be submitting
