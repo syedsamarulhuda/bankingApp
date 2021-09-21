@@ -2,7 +2,7 @@
 
 ## Scenario
 Imagine you have just joined a mobile team that is currently working on a banking application.
-The application is currently live on the Play Store and the CI/CD is set up so that everytime there is a push to the repository, the application is built and a new version is pushed to the Play Store.
+The application is live on the Play Store, and the CI/CD is set up to build a new version and push to the Play Store on every push to the repository.9
 
 Currently, the banking application allows its users to deposit and withdraw money from their bank account. 
 If the user does not have enough money, the app prevents them from making that withdrawal.
