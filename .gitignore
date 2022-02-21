@@ -45,6 +45,9 @@ captures/
 .idea/dictionaries
 .idea/libraries
 .idea/jarRepositories.xml
+.idea/misc.xml
+.idea/deploymentTargetDropDown.xml
+.idea/render.experimental.xml
 # Android Studio 3 in .gitignore file.
 .idea/caches
 .idea/modules.xml
@@ -87,3 +90,6 @@ lint/tmp/
 
 # Android Profiling
 *.hprof
+
+# MacOS
+.DS_Store
