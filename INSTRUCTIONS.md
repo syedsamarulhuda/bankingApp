@@ -17,17 +17,18 @@ Note: This feature is currently implemented locally, the API to support this fea
 - Improvements are to be made without rewriting the app
 
 ## Expectations
-The code is simple enough for one person to easily refactor in one sitting, but what we're after is seeing your refactoring strategy.
+The code is simple enough for one person to easily refactor in a couple sittings, but what we're after is seeing your refactoring strategy.
 We also don't expect the you to refactor everything, instead, we'd like you to tell us what you found important to change and why.
 We expect that the repository is always at a releasable state. It is important to make sure that any change does not introduce any regressions or bugs.
 
 We understand that everybody's situation is different that's why we give candidates several days to complete the exercise. 
-Having said that, please don't spend more than 5 hours to complete this exercise. 
+Having said that, please don't spend more than a usual working day to complete this exercise.
 
 Provide a README file to document any decisions/improvements you've deferred until later and any assumptions you have made.
 
 ### What we're looking for
 - Small incremental improvements – commit in small deliverable chunks
+- Use of a Depedency Injection Framework - Dagger preferred, but not required.
 - A testing strategy to support the refactoring
 - Simple and concise code
 - Proper modelling of the domain
