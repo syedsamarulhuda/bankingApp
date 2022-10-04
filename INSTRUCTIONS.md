@@ -40,6 +40,6 @@ Provide a README file to document any decisions/improvements you've deferred unt
 - A README that details the decisions you've made. This is a good place to write which improvements you've deferred but would like to work on given more time.
 
 ## Questions?
-- All questions are good questions, if you have any, please don't hesitate to send us an e-mail at jc@myzeller.com
+- All questions are good questions, if you have any, please don't hesitate to send us an e-mail at tim@myzeller.com and chris.hatton@myzeller.com
 
 Good luck and happy coding!
