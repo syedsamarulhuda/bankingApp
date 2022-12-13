@@ -27,12 +27,12 @@ Having said that, please don't spend more than a usual working day to complete t
 Provide a README file to document any decisions/improvements you've deferred until later and any assumptions you have made.
 
 ### What we're looking for
-- Small incremental improvements – commit in small deliverable chunks
-- Use of a Depedency Injection Framework - Dagger preferred, but not required.
+- Small incremental improvements, commit in small deliverable chunks
+- Show how you architect new code with a focus on testability
 - A testing strategy to support the refactoring
-- Simple and concise code
-- Proper modelling of the domain
-- A reasonable but scalable architecture
+    - Think about how you might prove you are not introducing regressions
+- Bonus marks for UI tests
+- Proper modelling of the domain, understand we are dealing with people's money
 - A README that will help other developers
 
 ### What you will be submitting
