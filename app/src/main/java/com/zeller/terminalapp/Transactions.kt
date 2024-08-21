@@ -1,6 +1,9 @@
 package com.zeller.terminalapp
 
+import java.math.BigDecimal
+
 class Transactions(
-    val amount: Float,
-    val isDeposit: Boolean
+    val amount: BigDecimal,
+    val isDeposit: Boolean,
+    val timeStamp: Long
 )

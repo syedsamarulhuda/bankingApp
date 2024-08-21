@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">TerminalApp</string>
+    <string name="_0_0">$ 0.0</string>
+    <string name="withdraw">Withdraw</string>
+    <string name="available_balance">Available Balance</string>
+    <string name="deposit">Deposit</string>
+    <string name="transaction_history">Transaction History</string>
+    <string name="no_transaction_history">no transaction history</string>
+    <string name="no_trasction_available">No Trasction Available!</string>
+    <string name="transaction_date">Transaction Date</string>
+    <string name="amount">Amount</string>
+    <string name="please_enter_amount">Please Enter Amount</string>
 </resources>

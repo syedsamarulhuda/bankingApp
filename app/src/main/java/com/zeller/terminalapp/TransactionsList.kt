@@ -5,4 +5,6 @@ class TransactionsList {
     fun addTransaction(transactions: Transactions) {
         transactionsList.add(transactions)
     }
+
+    fun getTransactions() = transactionsList
 }
