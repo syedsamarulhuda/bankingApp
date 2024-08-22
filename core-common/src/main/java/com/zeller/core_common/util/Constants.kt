@@ -9,4 +9,5 @@ object Constants {
     const val NOT_ENOUGH_BALANCE = "Not enough balance"
     const val CR = "Cr"
     const val DR = "Dr"
+    const val INVALID_AMOUNT = "Invalid Amount!"
 }

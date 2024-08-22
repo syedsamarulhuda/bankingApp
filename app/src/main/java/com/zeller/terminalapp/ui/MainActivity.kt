@@ -9,6 +9,7 @@ import com.zeller.core_common.data_model.Transactions
 import com.zeller.core_common.util.Constants.CTA_DEPOSIT
 import com.zeller.core_common.util.Constants.CTA_WITHDRAW
 import com.zeller.core_common.util.Constants.DEPOSIT_TITLE
+import com.zeller.core_common.util.Constants.INVALID_AMOUNT
 import com.zeller.core_common.util.Constants.NOT_ENOUGH_BALANCE
 import com.zeller.core_common.util.Constants.WITHDRAW_TITLE
 import com.zeller.terminalapp.R
@@ -37,8 +38,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    override fun onClick(view: View?)
-    {
+    override fun onClick(view: View?) {
         when (view?.id) {
             R.id.withdrawButton -> {
                 showTransactionAlertDialog(
@@ -46,6 +46,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     WITHDRAW_TITLE,
                     CTA_WITHDRAW
                 ) { withDrawAmount ->
+                    if (withDrawAmount.isNullOrBlank() || withDrawAmount.toBigDecimal() <= 0.toBigDecimal()) {
+                        Toast.makeText(this, INVALID_AMOUNT, Toast.LENGTH_LONG).show()
+                        return@showTransactionAlertDialog
+                    }
                     if (viewModel.isAmountValidForWithDraw(withDrawAmount?.toBigDecimal())) {
                         viewModel.insertTransaction(
                             Transactions(
@@ -66,6 +70,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     DEPOSIT_TITLE,
                     CTA_DEPOSIT
                 ) { depositAmount ->
+                    if (depositAmount.isNullOrBlank() || depositAmount.toBigDecimal() <= 0.toBigDecimal()) {
+                        Toast.makeText(this, INVALID_AMOUNT, Toast.LENGTH_LONG).show()
+                        return@showTransactionAlertDialog
+                    }
                     viewModel.insertTransaction(
                         Transactions(
                             isDeposit = true,
