@@ -4,7 +4,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.zeller.core_common.data_model.Transactions
 import com.zeller.core_common.util.getAmountWithCurrency
-import com.zeller.core_database.TransactionHistoryEntity
 import com.zeller.transaction_history.usecase.TransactionHistoryUseCase
 import com.zeller.transaction_history.usecase.TransactionUseCase
 import kotlinx.coroutines.Dispatchers
@@ -19,21 +18,13 @@ class TransactionViewModel(
 
     var availableBalance = MutableStateFlow("")
     val transactions: MutableList<Transactions> = mutableListOf()
-    private var balance = 0.toBigDecimal()
+    var balance = 0.toBigDecimal()
 
     fun getTransactionsHistory() {
         viewModelScope.launch(Dispatchers.IO) {
             transactionHistoryUseCase.getTransactions().collect {
                 transactions.clear()
-                it.forEach {
-                    transactions.add(
-                        Transactions(
-                            isDeposit = it.isDeposit,
-                            amount = it.amount.toBigDecimal(),
-                            timeStamp = it.transactionDate
-                        )
-                    )
-                }
+                transactions.addAll(it)
             }
         }
     }
@@ -46,19 +37,8 @@ class TransactionViewModel(
 
     fun getAvailableBalance() {
         viewModelScope.launch(Dispatchers.IO) {
-            val transactionList: MutableList<Transactions> = mutableListOf()
             transactionHistoryUseCase.getTransactions().collect {
-                transactionList.clear()
-                it.forEach {
-                    transactionList.add(
-                        Transactions(
-                            isDeposit = it.isDeposit,
-                            amount = it.amount.toBigDecimal(),
-                            timeStamp = it.transactionDate
-                        )
-                    )
-                }
-                setBalance(transactionList)
+                setBalance(it)
             }
 
         }

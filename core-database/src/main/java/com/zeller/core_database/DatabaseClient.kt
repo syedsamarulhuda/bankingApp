@@ -2,6 +2,8 @@ package com.zeller.core_database
 
 import android.content.Context
 import com.zeller.core_common.data_model.Transactions
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 
 const val DB_NAME = "zeller_transaction_database"
 
@@ -23,7 +25,22 @@ class DatabaseClient(context: Context) {
         )
     }
 
-    fun getAllTransactions() = appDatabase.transactionHistoryDao().getAllTransactions()
+    suspend fun getAllTransactions(): Flow<List<Transactions>> = flow {
+        val transactionList: MutableList<Transactions> = mutableListOf()
+        appDatabase.transactionHistoryDao().getAllTransactions().collect {
+            transactionList.clear()
+            it.forEach {
+                transactionList.add(
+                    Transactions(
+                        isDeposit = it.isDeposit,
+                        amount = it.amount.toBigDecimal(),
+                        timeStamp = it.transactionDate
+                    )
+                )
+            }
+            emit(transactionList)
+        }
+    }
 
 
 }

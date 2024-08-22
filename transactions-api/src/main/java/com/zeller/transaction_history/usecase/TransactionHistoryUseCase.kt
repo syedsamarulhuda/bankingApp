@@ -1,8 +1,8 @@
 package com.zeller.transaction_history.usecase
 
-import com.zeller.core_database.TransactionHistoryEntity
+import com.zeller.core_common.data_model.Transactions
 import kotlinx.coroutines.flow.Flow
 
 interface TransactionHistoryUseCase {
-    fun getTransactions(): Flow<List<TransactionHistoryEntity>>
+   suspend fun getTransactions(): Flow<List<Transactions>>
 }

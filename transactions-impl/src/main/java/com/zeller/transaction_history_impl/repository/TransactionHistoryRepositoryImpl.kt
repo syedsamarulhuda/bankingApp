@@ -6,5 +6,5 @@ import com.zeller.transaction_history.repository.TransactionHistoryRepository
 class TransactionHistoryRepositoryImpl(private val databaseClient: DatabaseClient) :
     TransactionHistoryRepository {
 
-    override fun getTransactions() = databaseClient.getAllTransactions()
+    override suspend fun getTransactions() = databaseClient.getAllTransactions()
 }

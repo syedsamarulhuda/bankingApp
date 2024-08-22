@@ -6,5 +6,5 @@ import com.zeller.transaction_history.usecase.TransactionHistoryUseCase
 class TransactionHistoryUseCaseImpl(private val transactionHistoryRepository: TransactionHistoryRepository) :
     TransactionHistoryUseCase {
 
-    override fun getTransactions() = transactionHistoryRepository.getTransactions()
+    override suspend fun getTransactions() = transactionHistoryRepository.getTransactions()
 }
