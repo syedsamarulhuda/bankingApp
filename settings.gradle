@@ -1,3 +1,7 @@
 include ':app'
 rootProject.name = "TerminalApp"
-include ':transaction-history'
+include ':transactions-api'
+include ':core-database'
+include ':core-common'
+include ':injector'
+include ':transactions-impl'

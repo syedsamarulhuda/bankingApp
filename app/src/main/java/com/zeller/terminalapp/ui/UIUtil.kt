@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import com.zeller.terminalapp.R
-import com.zeller.terminalapp.util.Constants.CTA_CANCEL
+import com.zeller.core_common.util.Constants.CTA_CANCEL
 
 fun showTransactionAlertDialog(
     activity: Activity,
@@ -31,5 +31,3 @@ fun showTransactionAlertDialog(
     val dialog: AlertDialog = builder.create()
     dialog.show()
 }
-
-fun getAmountCurrency(strAmount: String) = "$ $strAmount"
