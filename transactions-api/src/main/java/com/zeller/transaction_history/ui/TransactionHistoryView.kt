@@ -21,10 +21,10 @@ class TransactionHistoryView(context: Context, @Nullable attrs: AttributeSet?) :
     private val viewModel: TransactionViewModel by inject(TransactionViewModel::class.java)
 
     init {
-        viewModel.getTransactionsHistory()
         orientation = VERTICAL
         LayoutInflater.from(context).inflate(R.layout.layout_transaction_history_view, this, true)
         init()
+        viewModel.getTransactionsHistory()
     }
 
     private fun init() {
@@ -33,10 +33,4 @@ class TransactionHistoryView(context: Context, @Nullable attrs: AttributeSet?) :
         adapter = TransactionHistoryAdapter(viewModel.transactions)
         rvTransactionHistory.adapter = adapter
     }
-
-    fun updateTransactionHistory(transactionsList: MutableList<Transactions>) {
-        adapter = TransactionHistoryAdapter(transactionsList)
-        rvTransactionHistory.adapter = adapter
-    }
-
 }

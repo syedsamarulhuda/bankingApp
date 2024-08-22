@@ -10,6 +10,8 @@ import com.zeller.core_common.util.Constants.CR
 import com.zeller.core_common.util.Constants.DR
 import com.zeller.transaction_history.R
 import com.zeller.core_common.data_model.Transactions
+import com.zeller.core_common.util.getAmountWithCurrency
+import com.zeller.core_common.util.getDateTime
 
 const val EMPTY_VIEW_TYPE = 0
 const val DATA_VIEW_TYPE = 1
@@ -29,9 +31,8 @@ class TransactionHistoryAdapter(private val transactionsList: MutableList<Transa
             return
         }
         val itemsViewModel = transactionsList[position]
-        holder.tvDate.text = com.zeller.core_common.util.getDateTime(itemsViewModel.timeStamp)
-        holder.tvAmount.text =
-            com.zeller.core_common.util.getAmountWithCurrency(itemsViewModel.amount.toString())
+        holder.tvDate.text = getDateTime(itemsViewModel.timeStamp)
+        holder.tvAmount.text = getAmountWithCurrency(itemsViewModel.amount.toString())
         holder.tvType.text = if (itemsViewModel.isDeposit) CR else DR
         holder.tvType.setTextColor(if (itemsViewModel.isDeposit) Color.GREEN else Color.RED)
     }

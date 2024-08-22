@@ -17,7 +17,7 @@ class DatabaseClient(context: Context) {
         appDatabase.transactionHistoryDao().insertTransactionHistory(
             TransactionHistoryEntity(
                 transactionDate = transactions.timeStamp,
-                amount = transactions.amount.toFloat(),
+                amount = transactions.amount.toString(),
                 isDeposit = transactions.isDeposit
             )
         )
