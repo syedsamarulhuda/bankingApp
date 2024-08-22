@@ -8,9 +8,8 @@ import android.widget.LinearLayout
 import androidx.annotation.Nullable
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.zeller.core_common.data_model.Transactions
-import com.zeller.transaction_history.viewModel.TransactionViewModel
 import com.zeller.transaction_history.R
+import com.zeller.transaction_history.viewModel.TransactionViewModel
 import org.koin.java.KoinJavaComponent.inject
 
 
