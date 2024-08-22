@@ -56,31 +56,14 @@
         app:layout_constraintStart_toEndOf="@id/withdrawButton"
         app:layout_constraintTop_toBottomOf="@id/balance" />
 
-    <TextView
-        android:id="@+id/label_transaction_history"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
-        android:gravity="center"
-        android:text="@string/transaction_history"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/withdrawButton" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_transaction_history"
+    <com.zeller.transaction_history.ui.TransactionHistoryView
+        android:id="@+id/transaction_history_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/label_transaction_history"
-        tools:itemCount="5"
-        tools:listitem="@layout/transaction_item_layout" />
+        app:layout_constraintTop_toBottomOf="@id/withdrawButton"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

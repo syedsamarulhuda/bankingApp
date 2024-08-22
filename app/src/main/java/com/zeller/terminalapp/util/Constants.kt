@@ -1,8 +1,6 @@
 package com.zeller.terminalapp.util
 
 object Constants {
-    const val CR = "Cr"
-    const val DR = "Dr"
     const val CTA_CANCEL = "Cancel"
     const val CTA_DEPOSIT = "Deposit"
     const val CTA_WITHDRAW = "Withdraw"

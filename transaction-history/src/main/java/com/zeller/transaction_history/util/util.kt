@@ -1,4 +1,4 @@
-package com.zeller.terminalapp.util
+package com.zeller.transaction_history.util
 
 import android.annotation.SuppressLint
 import java.text.SimpleDateFormat

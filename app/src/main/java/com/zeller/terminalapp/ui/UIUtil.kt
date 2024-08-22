@@ -31,3 +31,5 @@ fun showTransactionAlertDialog(
     val dialog: AlertDialog = builder.create()
     dialog.show()
 }
+
+fun getAmountCurrency(strAmount: String) = "$ $strAmount"

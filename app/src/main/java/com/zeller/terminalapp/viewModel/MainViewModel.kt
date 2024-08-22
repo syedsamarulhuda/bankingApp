@@ -1,6 +1,8 @@
-package com.zeller.terminalapp
+package com.zeller.terminalapp.viewModel
 
-import com.zeller.terminalapp.util.getAmountWithCurrency
+import com.zeller.terminalapp.TransactionsList
+import com.zeller.terminalapp.ui.getAmountCurrency
+import com.zeller.transaction_history.dataModel.Transactions
 import java.math.BigDecimal
 
 object MainViewModel {
@@ -19,7 +21,7 @@ object MainViewModel {
                 )
             )
         }
-        return getAmountWithCurrency(balance.toString())
+        return getAmountCurrency(balance.toString())
     }
 
     fun withdrawAmount(withDrawAmount: String?): String {
@@ -36,7 +38,7 @@ object MainViewModel {
                 )
             }
         }
-        return getAmountWithCurrency(balance.toString())
+        return getAmountCurrency(balance.toString())
     }
 
     fun isAmountValidForWithDraw(withDrawAmount: BigDecimal?): Boolean {

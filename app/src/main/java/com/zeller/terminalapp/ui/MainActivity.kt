@@ -4,8 +4,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.zeller.terminalapp.MainViewModel
 import com.zeller.terminalapp.R
 import com.zeller.terminalapp.databinding.ActivityMainBinding
 import com.zeller.terminalapp.util.Constants.CTA_DEPOSIT
@@ -13,6 +11,7 @@ import com.zeller.terminalapp.util.Constants.CTA_WITHDRAW
 import com.zeller.terminalapp.util.Constants.DEPOSIT_TITLE
 import com.zeller.terminalapp.util.Constants.NOT_ENOUGH_BALANCE
 import com.zeller.terminalapp.util.Constants.WITHDRAW_TITLE
+import com.zeller.terminalapp.viewModel.MainViewModel
 
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -22,13 +21,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        val rvTransactionHistory = binding.rvTransactionHistory
         binding.depositButton.setOnClickListener(this)
         binding.withdrawButton.setOnClickListener(this)
         setContentView(binding.root)
-        rvTransactionHistory.layoutManager = LinearLayoutManager(this)
-        val adapter = TransactionHistoryAdapter(MainViewModel.transactions.getTransactions())
-        rvTransactionHistory.adapter = adapter
+        binding.transactionHistoryView.updateTransactionHistory(MainViewModel.transactions.getTransactions())
     }
 
     override fun onClick(view: View?) {
