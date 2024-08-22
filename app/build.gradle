@@ -40,8 +40,7 @@ android {
 dependencies {
     implementation(project(':injector'))
     implementation(project(':core-common'))
-    implementation(project(':core-database'))
-    implementation implementation(project(':transactions-api',))
+    implementation implementation(project(':transactions-api'))
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1"
     implementation "io.insert-koin:koin-core:3.5.3"

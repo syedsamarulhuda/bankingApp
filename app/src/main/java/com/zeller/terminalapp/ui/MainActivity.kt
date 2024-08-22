@@ -11,7 +11,6 @@ import com.zeller.core_common.util.Constants.CTA_WITHDRAW
 import com.zeller.core_common.util.Constants.DEPOSIT_TITLE
 import com.zeller.core_common.util.Constants.NOT_ENOUGH_BALANCE
 import com.zeller.core_common.util.Constants.WITHDRAW_TITLE
-import com.zeller.core_database.DatabaseClient
 import com.zeller.terminalapp.R
 import com.zeller.terminalapp.databinding.ActivityMainBinding
 import com.zeller.transaction_history.viewModel.TransactionViewModel
@@ -24,14 +23,12 @@ import org.koin.java.KoinJavaComponent.inject
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var databaseClient: DatabaseClient
     private val viewModel: TransactionViewModel by inject(TransactionViewModel::class.java)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel.getAvailableBalance()
         binding = ActivityMainBinding.inflate(layoutInflater)
-        databaseClient = DatabaseClient(this)
         binding.depositButton.setOnClickListener(this)
         binding.withdrawButton.setOnClickListener(this)
         setContentView(binding.root)

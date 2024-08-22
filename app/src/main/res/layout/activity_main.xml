@@ -56,7 +56,7 @@
         app:layout_constraintStart_toEndOf="@id/withdrawButton"
         app:layout_constraintTop_toBottomOf="@id/balance" />
 
-    <com.zeller.transaction_history.ui.TransactionHistoryView
+    <com.zeller.terminalapp.ui.TransactionHistoryView
         android:id="@+id/transaction_history_view"
         android:layout_width="0dp"
         android:layout_height="0dp"

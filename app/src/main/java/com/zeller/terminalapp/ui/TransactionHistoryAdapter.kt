@@ -1,4 +1,4 @@
-package com.zeller.transaction_history.ui
+package com.zeller.terminalapp.ui
 
 import android.graphics.Color
 import android.view.LayoutInflater
@@ -8,10 +8,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.zeller.core_common.util.Constants.CR
 import com.zeller.core_common.util.Constants.DR
-import com.zeller.transaction_history.R
 import com.zeller.core_common.data_model.Transactions
 import com.zeller.core_common.util.getAmountWithCurrency
 import com.zeller.core_common.util.getDateTime
+import com.zeller.terminalapp.R
 
 const val EMPTY_VIEW_TYPE = 0
 const val DATA_VIEW_TYPE = 1
