@@ -1,8 +1,7 @@
-package com.zeller.core_database
+package com.zeller.core_database.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.math.BigDecimal
 
 @Entity(tableName = "transaction_history")
 data class TransactionHistoryEntity(

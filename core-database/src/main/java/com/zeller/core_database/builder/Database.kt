@@ -1,4 +1,4 @@
-package com.zeller.core_database
+package com.zeller.core_database.builder
 
 import android.content.Context
 import androidx.room.Room

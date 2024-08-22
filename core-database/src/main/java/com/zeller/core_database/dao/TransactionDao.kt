@@ -1,9 +1,10 @@
-package com.zeller.core_database
+package com.zeller.core_database.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.zeller.core_database.entity.TransactionHistoryEntity
 import kotlinx.coroutines.flow.Flow
 
 @Dao
