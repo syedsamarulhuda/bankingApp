@@ -1,4 +1,4 @@
-# Zeller Terminal App: Bank Transaction Screen
+# Banking App: Bank Transaction Screen
 
 ## Overview
 
