@@ -64,6 +64,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 }
             }
 
+
             R.id.depositButton -> {
                 showTransactionAlertDialog(
                     this,
