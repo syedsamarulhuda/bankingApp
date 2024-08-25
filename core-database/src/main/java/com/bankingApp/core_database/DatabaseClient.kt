@@ -8,7 +8,7 @@ import com.bankingApp.core_database.entity.TransactionHistoryEntity
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
-const val DB_NAME = "zeller_transaction_database"
+const val DB_NAME = "bank_app_transaction_database"
 
 class DatabaseClient(context: Context) {
 
