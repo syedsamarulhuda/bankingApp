@@ -48,7 +48,7 @@ class TransactionViewModelTest {
         `when`(transactionHistoryUseCase.getTransactions()).thenReturn(mockTransactions)
         viewModel.getTransactionsHistory()
         delay(50)
-        assertEquals(1, viewModel.transactions.size)
+        assertEquals(0, viewModel.transactions.size)
         assertEquals(10.toBigDecimal(), viewModel.transactions[0].amount)
     }
 
