@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.zeller.transaction_history'
+    namespace 'com.bankingApp.transaction_history'
     compileSdk 34
 
     defaultConfig {

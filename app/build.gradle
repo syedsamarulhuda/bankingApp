@@ -8,7 +8,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.zeller.terminalapp"
+        applicationId "com.bankingApp.terminalapp"
         minSdkVersion 22
         targetSdkVersion 34
         versionCode 1
@@ -34,7 +34,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    namespace 'com.zeller.terminalapp'
+    namespace 'com.bankingApp.terminalapp'
 }
 
 dependencies {

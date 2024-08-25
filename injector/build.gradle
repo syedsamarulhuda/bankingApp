@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.zeller.injector'
+    namespace 'com.bankingApp.injector'
     compileSdk 34
 
     defaultConfig {

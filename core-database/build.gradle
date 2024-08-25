@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace 'com.zeller.core_database'
+    namespace 'com.bankingApp.core_database'
     compileSdk 34
 
     defaultConfig {
